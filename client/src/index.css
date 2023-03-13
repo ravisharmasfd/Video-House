@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Mogra&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  background-color: #252836;
+}
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .no-outline:focus {
+    outline: none;
+  }
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  background-color: #46C2CB;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #453C67;
+
+}
+.sharepost{
+  box-shadow: 4px 2px 30px 0px rgba(0,0,0,0.75);
+}
+.post-box{
+    box-shadow: 4px 2px 30px 0px rgba(0,0,0,0.75);
+  
+}
+.appBoxShadow{
+  box-shadow: 4px 2px 30px 0px rgba(0,0,0,0.75);
+
+}
+.appBoxHoverShadow:hover{
+  box-shadow: 4px 2px 40px 0px rgba(27, 26, 26, 0.75);
+
+}
+.deep{
+  border-radius: 3px  solid white;
+box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.5)
+}
+
+.model{
+  z-index: 1000;
+}
+.react-player {
+  height: 50vh !important;
+  width: 100% !important;
+}
