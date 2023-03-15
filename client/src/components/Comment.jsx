@@ -36,15 +36,15 @@ const Comments = ({ videoId }) => {
         fetch()
     },[videoId]);
   return (
-    <div className='flex flex-col justify-center items-center w-[90vw] gap-4 overflow-y-auto bg-third rounded-xl p-8 my-4'>
-        <div className='flex flex-row items-start justify-start gap-4 w-4/5 p-4 bg-second rounded-xl'>
-            <textarea className='w-3/4 bg-first rounded-xl' value={commentText} onChange={(e)=>{setCommentText(e.target.value)}} placeholder="New Comment"></textarea>
+    <div className='flex flex-col justify-center items-center w-[95vw] md:w-[90vw] gap-4 overflow-y-auto bg-third rounded-xl p-8 my-4'>
+        <div className='flex flex-row items-start justify-start gap-4 w-[90%] p-2 bg-second rounded-xl'>
+            <textarea className='w-4/5 bg-first rounded-xl' value={commentText} onChange={(e)=>{setCommentText(e.target.value)}} placeholder="New Comment"></textarea>
             <button className='bg-second hover:bg:third rounded-xl' onClick={addComment}>Add Comment</button>
         </div>
       {comments.map((comment) => (
-        <div className='flex flex-col w-4/5 items-start justify-center rounded-xl bg-second p-2'  key={comment?._id}>
-          <p className='mx-4 p-4'>{comment.text}</p>
-          <div className='flex flex-row w-4/5 items-center justify-start mx-4 gap-4 '>
+        <div className='flex flex-col w-[90%] items-start justify-center rounded-xl bg-second p-2 gap-4'  key={comment?._id}>
+          <p className='mx-auto p-4'>{comment.text}</p>
+          <div className='flex flex-row w-[90%] items-center justify-start mx-4 gap-4 '>
             <Link className='bg-first hover:bg:third rounded-xl p-1' to={`/profile/${comment?.sender?.userName}`}>{comment?.sender?.userName}</Link>
             <button className='bg-first hover:bg:third rounded-xl p-1' onClick={()=>{
               if(comment?._id == open) setOpen(null);

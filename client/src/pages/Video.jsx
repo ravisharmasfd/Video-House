@@ -74,14 +74,14 @@ useEffect(
       <div className='p-4 w-full  overflow-hidden'><ReactPlayer  className='react-player aspect-video' url={videoData?.video} playing={true} controls/></div>
       <p className="p-4 text-lg">{videoData?.title}</p>
       <div className="flex flex-row items-center justify-between w-full p-4">
-        <span className="text-sm">{videoData?.views + " views"}</span>
-        <Link to={`/profile/${videoUser?.userName}`}>
+        <span className="text-lg hover:text-third font-bold ">{videoData?.views + " views"}</span>
+        <Link className="text-lg hover:text-third font-bold " to={`/profile/${videoUser?.userName}`}>
             {
               videoUser?.userName
             }
           </Link>
       </div>
-      <div className="flex flex-row items-center justify-between w-full px-10">
+      <div className="flex flex-row items-center justify-between w-full p-4">
             <button className='ml-4 hover:scale-105' onClick={()=>{likeFunc(videoData._id)}}>
                 <span className='mr-2'><FavoriteIcon sx={userLike ? {color: "#FF0078"} : { color: "white"}}></FavoriteIcon></span>
                 <span className='mr-1'>{videoData?.likes.length}</span>
@@ -93,7 +93,7 @@ useEffect(
             </button>
       </div>
       {share && <div className="sticky">
-      <ShareSocial 
+      <ShareSocial className='fixed'
      url ={window.location.href}
      socialTypes={['facebook','twitter','reddit','linkedin']}
    />

@@ -45,7 +45,7 @@ function Upload() {
       });
 
       if (res.status === 200) {
-        navigate(`video/${res.data._id}`)
+        navigate(`/video/${res.data._id}`)
       }
       setUploading(false);
     } catch (error) {
@@ -93,7 +93,10 @@ function Upload() {
                     </div>
                   </div>
 
-                  {uploading ?<ProgressBar completed={progress} /> :<button
+                  {uploading ?<div className='flex flex-col p-4 m-4 justify-center gap-4 items-center w-full'>
+                    <ProgressBar completed={progress} />
+                    <span>Wait until upload....</span>
+                    </div> :<button
                   onClick={handleSubmit}
                     type="submit"
                     className="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"

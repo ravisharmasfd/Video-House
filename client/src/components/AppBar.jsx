@@ -55,7 +55,6 @@ function AppBar() {
             <div className="flex flex-col items-center w-full h-full justify-center">
             <Link onClick={handleClose} className="hover:bg-first rounded-lg p-4 m-5 text-sm" to={`/profile/${state?.user?.userName}`}><PersonIcon></PersonIcon><span>Profile</span></Link>
             <Link to='/edit' onClick={handleClose} className="hover:bg-first rounded-lg p-4 m-5 text-sm"><EditIcon></EditIcon><span>Edit Profile</span></Link>
-            <Link to='/find' onClick={handleClose} className="hover:bg-first rounded-lg p-4 m-5 text-sm"><Diversity3Icon></Diversity3Icon><span>Find Users</span></Link>
             <Link to='/upload' onClick={handleClose} className="hover:bg-first rounded-lg p-4 m-5 text-sm"><FileUploadIcon></FileUploadIcon><span>Upload</span></Link>
             <button onClick={logoutFunc} className="hover:bg-first rounded-lg p-4 m-5 text-sm"><LogoutIcon></LogoutIcon> <span>Logout</span></button>
             </div>
